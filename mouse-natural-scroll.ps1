@@ -1,6 +1,7 @@
 Write-Host "Finding your USB mouse..." -ForegroundColor Cyan
 
-$mouses = Get-CimInstance -ClassName Win32_PointingDevice | Where-Object Name -Match "HID-compliant mouse"
+$mouses = Get-CimInstance -ClassName Win32_PointingDevice | Where-Object Name -Match "USB Input Device"
+$mouses += Get-CimInstance -ClassName Win32_PointingDevice | Where-Object Name -Match "HID-compliant mouse"
 if (!$mouses) {
     Write-Host -ForegroundColor Red "Could not find your USB mouse"
     exit 1
