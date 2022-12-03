@@ -33,8 +33,8 @@ foreach ($mouse in $mouses) {
     if ($args[0] -eq "reverse") {
         Set-ItemProperty -Path $reg_path -Name FlipFlopWheel -Value 0
         Write-Host "Natural scrolling feature for your mouse has been DISABLED" -ForegroundColor Green
-        exit
+    } else {
+        Set-ItemProperty -Path $reg_path -Name FlipFlopWheel -Value 1
+        Write-Host "Natural scrolling feature for your mouse has been ENABLED" -ForegroundColor Green
     }
-    Set-ItemProperty -Path $reg_path -Name FlipFlopWheel -Value 1
-    Write-Host "Natural scrolling feature for your mouse has been ENABLED" -ForegroundColor Green
 }
