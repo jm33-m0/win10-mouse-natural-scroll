@@ -6,7 +6,7 @@
 #
 # Run this script in PowerShell as administrator.
 #
-# The mouse behavior changes only after rebooting the system.
+# The mouse behavior changes only after reconnecting the mouse.
 
 $setting_names = @("DEFAULT", "NATURAL")
 
